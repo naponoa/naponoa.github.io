@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>naponoa inc. | App Development</title>
 
+<title>naponoa inc. | iPhoneアプリ開発・運営</title>
+
+<meta name="description" content="naponoa inc.は、iPhoneアプリの企画・デザイン・開発・運営を行っています。写真加工アプリ、カメラアプリ、ゲームなど、毎日を楽しくするアプリを提供しています。">
+
+<meta name="keywords" content="iPhoneアプリ開発,アプリ開発,スマホアプリ,カメラアプリ,写真加工アプリ,ゲームアプリ,iOS開発,naponoa inc.">
+
+
+<!-- favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+<!-- OGP -->
+
+<meta property="og:title" content="naponoa inc. | iPhoneアプリ開発・運営">
+
+<meta property="og:description" content="毎日をもっと楽しく、もっとかわいく。iPhoneアプリの企画・デザイン・開発・運営を行っています。">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://naponoa.github.io/naponoa/index.html">
+
+<meta property="og:image" content="https://naponoa.github.io/naponoa/index.htmlogp.jpg">
+
+<meta property="og:site_name" content="naponoa inc.">
+
+
+<!-- Twitter Card -->
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="naponoa inc. | iPhoneアプリ開発・運営">
+
+<meta name="twitter:description" content="デザイン性と使いやすさを大切にしたiPhoneアプリを企画・開発しています。">
+
+<meta name="twitter:image" content="https://naponoa.github.io/naponoa/index.htmlogp.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -16,6 +51,7 @@
 }
 
 body{
+
     font-family:"Nunito",sans-serif;
     background:#fff8fc;
     color:#444;
@@ -28,45 +64,66 @@ a{
 }
 
 .container{
+
     width:90%;
     max-width:1200px;
     margin:auto;
 }
 
+
+/* Header */
+
 header{
+
     position:sticky;
     top:0;
     z-index:100;
-    background:rgba(255,255,255,.8);
+
+    background:rgba(255,255,255,.85);
     backdrop-filter:blur(18px);
-    border-bottom:1px solid #ffe5ef;
+
+    border-bottom:1px solid #f8dce8;
 }
 
 header .container{
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:18px 0;
 }
 
+
 .logo{
+
     font-size:28px;
     font-weight:800;
-    color:#ff6fa8;
+    color:#ee8bb0;
 }
 
+
 nav a{
+
     margin-left:30px;
     font-weight:700;
+
 }
+
+
+
+/* Hero */
 
 .hero{
 
     padding:100px 0;
+
     background:
-    radial-gradient(circle at top left,#ffd8eb 0,#fff8fc 45%),
-    radial-gradient(circle at bottom right,#ffe8f5 0,#fff8fc 40%);
+    radial-gradient(circle at top left,#ffdce9 0,#fff8fc 45%),
+    radial-gradient(circle at bottom right,#ffeaf4 0,#fff8fc 40%);
+
 }
+
 
 .hero-content{
 
@@ -74,501 +131,688 @@ nav a{
     flex-wrap:wrap;
     align-items:center;
     justify-content:space-between;
+
     gap:60px;
+
 }
 
+
 .hero-text{
+
     flex:1;
     min-width:320px;
+
 }
+
 
 .hero-text h1{
 
     font-size:54px;
-    color:#ff4f93;
     line-height:1.2;
+
+    color:#ee8bb0;
+
     margin-bottom:25px;
+
 }
+
 
 .hero-text p{
 
     font-size:20px;
     margin-bottom:35px;
+
 }
+
+
 
 .button{
 
     display:inline-block;
-    background:#ff6fa8;
-    color:#fff;
+
+    background:#ee8bb0;
+
+    color:white;
+
     padding:16px 34px;
+
     border-radius:50px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
+
 
 .button:hover{
-    background:#ff4f93;
+
+    background:#d9769b;
+
     transform:translateY(-3px);
+
 }
 
+
+
+/* Phone */
+
 .hero-image{
+
     flex:1;
     text-align:center;
+
+    opacity:0;
+    transform:translateY(60px) scale(.96);
+
+    animation:phoneAppear 1.4s cubic-bezier(.22,1,.36,1) forwards;
+
+    animation-delay:.5s;
+
 }
+
+
+
+@keyframes phoneAppear{
+
+from{
+
+    opacity:0;
+    transform:translateY(60px) scale(.96);
+
+}
+
+to{
+
+    opacity:1;
+    transform:translateY(0) scale(1);
+
+}
+
+}
+
 
 .phone{
 
     width:320px;
     height:640px;
+
     border-radius:40px;
+
     background:white;
+
     box-shadow:0 20px 50px rgba(0,0,0,.12);
+
     overflow:hidden;
+
     padding:15px;
+
     margin:auto;
+
 }
 
+
+
 .phone img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
     border-radius:28px;
+
 }
+
+
+
+
+/* Section */
 
 section{
 
     padding:90px 0;
+
 }
+
 
 h2{
 
     text-align:center;
+
     font-size:38px;
-    color:#ff5f9d;
+
+    color:#ee8bb0;
+
     margin-bottom:50px;
+
 }
+
+
+
+
+/* About */
 
 .about{
 
     text-align:center;
+
     max-width:900px;
+
     margin:auto;
+
     font-size:20px;
+
 }
+
+
+
 
 .features{
 
     display:grid;
+
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
     gap:30px;
+
     margin-top:60px;
+
 }
+
+
 
 .card{
 
     background:white;
+
     border-radius:25px;
+
     padding:35px;
-    box-shadow:0 10px 30px rgba(255,105,180,.08);
-    transition:.3s;
+
+    box-shadow:0 10px 30px rgba(238,139,176,.12);
+
 }
 
-.card:hover{
 
-    transform:translateY(-6px);
-}
 
 .card h3{
 
-    color:#ff6fa8;
+    color:#ee8bb0;
+
     margin-bottom:15px;
+
 }
+
+
+
+
+/* Apps */
+
 
 .apps{
 
     display:grid;
+
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
     gap:30px;
+
 }
+
 
 .app{
 
     background:white;
+
     border-radius:25px;
+
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(255,105,180,.08);
+
+    box-shadow:0 10px 30px rgba(238,139,176,.12);
+
 }
+
 
 .app img{
 
     width:100%;
+
     height:220px;
+
     object-fit:cover;
+
 }
+
 
 .app-body{
 
     padding:25px;
+
 }
+
 
 .app h3{
 
-    color:#ff5c98;
+    color:#ee8bb0;
+
     margin-bottom:10px;
+
 }
+
+
+
+/* Footer */
 
 footer{
 
-    background:#fff;
-    border-top:1px solid #ffe4ee;
+    background:white;
+
+    border-top:1px solid #f8dce8;
+
     padding:35px;
+
     text-align:center;
+
     color:#777;
+
 }
 
-@media(max-width:768px){
 
-.hero-text h1{
-font-size:40px;
-}
 
-.phone{
-width:260px;
-height:520px;
-}
-/* ===========================
-   Smartphone Responsive
-=========================== */
+
+/* Smartphone */
 
 @media screen and (max-width:768px){
 
-    body{
-        overflow-x:hidden;
-    }
 
-    .container{
-        width:100%;
-        padding:0 20px;
-    }
+.container{
 
+    width:100%;
 
-    /* Header */
-
-    header .container{
-        padding:15px 20px;
-    }
-
-    .logo{
-        font-size:24px;
-    }
-
-    nav{
-        display:none;
-    }
-
-
-    /* Hero */
-
-    .hero{
-        padding:60px 0;
-    }
-
-    .hero-content{
-        flex-direction:column-reverse;
-        gap:35px;
-        text-align:center;
-    }
-
-    .hero-text{
-        min-width:0;
-        width:100%;
-    }
-
-    .hero-text h1{
-        font-size:34px;
-        line-height:1.35;
-        margin-bottom:20px;
-    }
-
-    .hero-text p{
-        font-size:16px;
-        line-height:1.8;
-        margin-bottom:30px;
-    }
-
-    .button{
-        display:block;
-        width:100%;
-        max-width:280px;
-        margin:auto;
-        padding:14px 0;
-    }
-
-
-    /* iPhone mockup */
-
-    .hero-image{
-        width:100%;
-    }
-
-    .phone{
-        width:240px;
-        height:490px;
-        border-radius:35px;
-        padding:12px;
-    }
-
-    .phone img{
-        border-radius:25px;
-    }
-
-
-    /* Section */
-
-    section{
-        padding:60px 0;
-    }
-
-    h2{
-        font-size:30px;
-        margin-bottom:35px;
-    }
-
-
-    /* About */
-
-    .about{
-        font-size:16px;
-        line-height:2;
-    }
-
-
-    /* Feature Cards */
-
-    .features{
-        grid-template-columns:1fr;
-        gap:18px;
-        margin-top:40px;
-    }
-
-    .card{
-        padding:25px;
-        border-radius:20px;
-    }
-
-    .card h3{
-        font-size:18px;
-    }
-
-
-    /* Apps */
-
-    .apps{
-        grid-template-columns:1fr;
-        gap:25px;
-    }
-
-    .app{
-        border-radius:20px;
-    }
-
-    .app img{
-        height:200px;
-    }
-
-    .app-body{
-        padding:20px;
-    }
-
-    .app h3{
-        font-size:20px;
-    }
-
-
-    /* Footer */
-
-    footer{
-        padding:30px 20px;
-        font-size:13px;
-    }
+    padding:0 20px;
 
 }
+
+
+nav{
+
+    display:none;
+
+}
+
+
+.hero{
+
+    padding:60px 0;
+
+}
+
+
+.hero-content{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+    gap:35px;
+
+}
+
+
+
+.hero-text h1{
+
+    font-size:34px;
+
+}
+
+
+
+.hero-text p{
+
+    font-size:16px;
+
+}
+
+
+
+.button{
+
+    width:100%;
+
+    max-width:280px;
+
+}
+
+
+
+.phone{
+
+    width:240px;
+
+    height:490px;
+
+}
+
+
+
+section{
+
+    padding:60px 0;
+
+}
+
+
+
+h2{
+
+    font-size:30px;
+
+}
+
+
+
+.about{
+
+    font-size:16px;
+
+}
+
+
+
+.features{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.apps{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.app img{
+
+    height:200px;
+
+}
+
+
+footer{
+
+    font-size:13px;
+
+}
+
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
 <div class="container">
 
-<div class="logo">AAA</div>
+<div class="logo">
+AAA
+</div>
+
 
 <nav>
 
-<a href="#">About</a>
-<a href="#">Apps</a>
-<a href="#">Contact</a>
+<a href="about.html">About</a>
+
+<a href="#apps">Apps</a>
+
+<a href="privacy.html">Privacy Policy</a>
 
 </nav>
+
 
 </div>
 
 </header>
 
+
+
+
 <section class="hero">
+
 
 <div class="container hero-content">
 
+
 <div class="hero-text">
 
-<h1>Creating Apps<br>That Brighten Your Day.</h1>
+
+<h1>
+Creating Apps<br>
+That Brighten Your Day.
+</h1>
+
 
 <p>
 
 毎日をもっと楽しく、もっとかわいく。<br>
+
 iPhoneアプリの企画・デザイン・開発・運営を行っています。
 
 </p>
 
-<a class="button" href="#">配信中アプリを見る</a>
+
+<a href="#apps" class="button">
+
+配信中アプリを見る
+
+</a>
+
 
 </div>
 
+
+
 <div class="hero-image">
+
 
 <div class="phone">
 
-<!-- スクリーンショット画像 -->
 <img src="app-screenshot.jpg" alt="App Screenshot">
 
 </div>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
 
+
+
+
 <section>
+
 
 <div class="container">
 
-<h2>About</h2>
+
+<h2>
+About
+</h2>
+
 
 <div class="about">
 
-企画・UIデザイン・開発・App Store公開・運営まで、
-一つひとつのアプリを丁寧に制作しています。
-シンプルで使いやすく、毎日が少し楽しくなる体験を目指しています。
+企画からデザイン、開発、App Store公開、運営まで
+一貫して行っています。<br>
+
+毎日が少し楽しくなるようなアプリ体験を提供します。
 
 </div>
 
+
+
 <div class="features">
+
 
 <div class="card">
 
 <h3>📱 App Development</h3>
 
 <p>
-iPhoneアプリ開発
+iPhoneアプリの企画・開発
 </p>
 
 </div>
+
+
 
 <div class="card">
 
 <h3>🎨 UI / UX Design</h3>
 
 <p>
-シンプルでかわいいデザイン
+かわいく使いやすいデザイン制作
 </p>
 
 </div>
+
+
 
 <div class="card">
 
 <h3>🚀 App Operation</h3>
 
 <p>
-運用・改善
+公開後の改善・アップデート運営
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="apps">
+
+
+<div class="container">
+
+
+<h2>
+Our Apps
+</h2>
+
+
+<div class="apps">
+
+
+<div class="app">
+
+<img src="pinkyphoto.jpg">
+
+
+<div class="app-body">
+
+<h3>PinkyPhoto</h3>
+
+<p>
+かわいいフィルターで写真加工ができるアプリ。
 </p>
 
 </div>
 
 </div>
 
-</div>
 
-</section>
 
-<section>
-
-<div class="container">
-
-<h2>Our Apps</h2>
-
-<div class="apps">
-
-<div class="app">
-
-<img src="pinkyphoto.jpg">
-
-<div class="app-body">
-
-<h3>PinkyPhoto</h3>
-
-<p>かわいいフィルターで写真加工ができるアプリ。</p>
-
-</div>
-
-</div>
 
 <div class="app">
 
 <img src="pinkycamera.jpg">
 
+
 <div class="app-body">
 
 <h3>PinkyCamera</h3>
 
-<p>ゆめかわフィルターで毎日をもっとかわいく。</p>
+<p>
+ゆめかわフィルターで毎日をもっとかわいく。
+</p>
 
 </div>
 
 </div>
+
+
+
 
 <div class="app">
 
 <img src="game.jpg">
 
+
 <div class="app-body">
 
 <h3>潮干狩りゲーム</h3>
 
-<p>30秒で楽しめるカジュアルゲーム。</p>
+<p>
+30秒で遊べるカジュアルゲーム。
+</p>
 
 </div>
 
 </div>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
 
+
+
+
 <footer>
 
-© 2026 naponoa inc.<br><br>
 
-Privacy Policy　|　Terms of Service
+© 2026 naponoa inc.
+
+<br><br>
+
+
+<a href="privacy.html">
+Privacy Policy
+</a>
 
 </footer>
+
+
 
 </body>
 </html>
