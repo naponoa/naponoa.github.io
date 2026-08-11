@@ -212,7 +212,17 @@ nav a{
 
 }
 
+ /*　contact */   
+    
+.contact-section{
+    text-align:center;
+    padding:90px 0;
+}
 
+.contact-section p{
+    margin-bottom:30px;
+    color:#666;
+}
 
 @keyframes phoneAppear{
 
@@ -419,6 +429,39 @@ footer{
 
 }
 
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:20px;
+}
+
+.social-links a{
+    color:#ee8bb0;
+    font-weight:700;
+    transition:.3s;
+}
+
+.social-links a:hover{
+    opacity:.7;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:20px;
+}
+
+.footer-links a{
+    color:#777;
+    font-size:14px;
+}
+
+.copyright{
+    color:#999;
+    font-size:13px;
+}
 
 
 
@@ -550,6 +593,14 @@ footer{
 
 }
 
+.social-links{
+        gap:22px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+        gap:15px;
+    }
 
 }
 
@@ -795,23 +846,70 @@ Our Apps
 
 </section>
 
+<section class="contact-section">
 
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <p>
+            アプリに関するお問い合わせ、その他ご連絡はこちらからお願いいたします。
+        </p>
+
+        <a href="mailto:YOUR_EMAIL@example.com" class="button">
+            お問い合わせ
+        </a>
+
+    </div>
+
+</section>
 
 
 <footer>
 
+    <div class="container">
 
-© 2026 naponoa inc.
+        <div class="social-links">
 
-<br><br>
+            <a href="https://x.com/YOUR_ACCOUNT"
+               target="_blank"
+               rel="noopener noreferrer">
+                X
+            </a>
 
-<!--
-<a href="privacy.html">
-Privacy Policy
-</a>
--->
+            <a href="https://www.instagram.com/YOUR_ACCOUNT/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Instagram
+            </a>
+
+            <a href="https://www.tiktok.com/@YOUR_ACCOUNT"
+               target="_blank"
+               rel="noopener noreferrer">
+                TikTok
+            </a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="about.html">About</a>
+
+            <a href="index.html#apps">Apps</a>
+
+            <a href="privacy.html">Privacy Policy</a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 naponoa
+        </p>
+
+    </div>
+
 </footer>
-
 
 
 </body>
