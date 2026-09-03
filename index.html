@@ -1,610 +1,748 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>naponoa inc. | iPhoneアプリ開発・運営</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="naponoa inc.は、iPhoneアプリの企画・デザイン・開発・運営を行っています。写真加工アプリ、カメラアプリ、ゲームなど、毎日を楽しくするアプリを提供しています。">
+    <title>naponoa inc. | iPhoneアプリ開発・運営</title>
 
-<meta name="keywords" content="iPhoneアプリ開発,アプリ開発,スマホアプリ,カメラアプリ,写真加工アプリ,ゲームアプリ,iOS開発,naponoa inc.">
+    <meta name="description"
+          content="naponoa inc.は、iPhoneアプリの企画・デザイン・開発・運営を行っています。写真加工アプリ、カメラアプリ、ゲームなど、毎日を楽しくするアプリを提供しています。">
 
+    <meta name="keywords"
+          content="iPhoneアプリ開発,アプリ開発,スマホアプリ,カメラアプリ,写真加工アプリ,ゲームアプリ,iOS開発,naponoa inc.">
 
-<!-- favicon -->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Favicon -->
 
-<!-- OGP -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<meta property="og:title" content="naponoa inc. | iPhoneアプリ開発・運営">
 
-<meta property="og:description" content="毎日をもっと楽しく、もっとかわいく。iPhoneアプリの企画・デザイン・開発・運営を行っています。">
+    <!-- OGP -->
 
-<meta property="og:type" content="website">
+    <meta property="og:title"
+          content="naponoa inc. | iPhoneアプリ開発・運営">
 
-<meta property="og:url" content="https://naponoa.github.io/naponoa/index.html">
+    <meta property="og:description"
+          content="毎日をもっと楽しく、もっとかわいく。iPhoneアプリの企画・デザイン・開発・運営を行っています。">
 
-<meta property="og:image" content="https://naponoa.github.io/naponoa/index.htmlogp.jpg">
+    <meta property="og:type" content="website">
 
-<meta property="og:site_name" content="naponoa inc.">
+    <meta property="og:url"
+          content="https://naponoa.github.io/naponoa/index.html">
 
+    <meta property="og:image"
+          content="https://naponoa.github.io/naponoa/ogp.jpg">
 
-<!-- Twitter Card -->
+    <meta property="og:site_name" content="naponoa inc.">
 
-<meta name="twitter:card" content="summary_large_image">
 
-<meta name="twitter:title" content="naponoa inc. | iPhoneアプリ開発・運営">
+    <!-- Twitter Card -->
 
-<meta name="twitter:description" content="デザイン性と使いやすさを大切にしたiPhoneアプリを企画・開発しています。">
+    <meta name="twitter:card" content="summary_large_image">
 
-<meta name="twitter:image" content="https://naponoa.github.io/naponoa/index.htmlogp.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="twitter:title"
+          content="naponoa inc. | iPhoneアプリ開発・運営">
 
-<style>
+    <meta name="twitter:description"
+          content="デザイン性と使いやすさを大切にしたiPhoneアプリを企画・開発しています。">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <meta name="twitter:image"
+          content="https://naponoa.github.io/naponoa/ogp.jpg">
 
-body{
 
-    font-family:"Nunito",sans-serif;
-    background:#fff8fc;
-    color:#444;
-    line-height:1.8;
-}
+    <!-- Google Fonts -->
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
 
-.container{
 
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
+    <style>
 
+        /* =========================
+           Reset
+        ========================= */
 
-/* Header */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header{
 
-    position:sticky;
-    top:0;
-    z-index:100;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(18px);
 
-    border-bottom:1px solid #f8dce8;
-}
+        body {
+            font-family: "Nunito", sans-serif;
+            background: #fff8fc;
+            color: #444;
+            line-height: 1.8;
+        }
 
-header .container{
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    padding:18px 0;
-}
 
+        img {
+            display: block;
+            max-width: 100%;
+        }
 
-.logo{
 
-    font-size:28px;
-    font-weight:800;
-    color:#ff88b6;
-    margin:0 10px;
-}
+        /* =========================
+           Container
+        ========================= */
 
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-nav a{
 
-    margin-left:30px;
-    font-weight:700;
+        /* =========================
+           Header
+        ========================= */
 
-}
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
 
+            background: rgba(255, 255, 255, 0.85);
 
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
 
-/* Hero */
+            border-bottom: 1px solid #f8dce8;
+        }
 
-.hero{
 
-    padding:100px 0;
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-    background:
-    radial-gradient(circle at top left,#ffdce9 0,#fff8fc 45%),
-    radial-gradient(circle at bottom right,#ffeaf4 0,#fff8fc 40%);
+            padding: 18px 0;
+        }
 
-}
 
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ff88b6;
+            margin: 0 10px;
+        }
 
-.hero-content{
 
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-between;
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-    gap:60px;
 
-}
+        nav a {
+            margin-left: 30px;
+            font-weight: 700;
 
+            transition: 0.3s;
+        }
 
-.hero-text{
 
-    flex:1;
-    min-width:320px;
+        nav a:hover {
+            color: #ff88b6;
+        }
 
-}
 
+        /* =========================
+           Hero
+        ========================= */
 
-.hero-text h1{
+        .hero {
+            padding: 100px 0;
 
-    font-size:54px;
-    line-height:1.2;
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #ffdce9 0,
+                    #fff8fc 45%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #ffeaf4 0,
+                    #fff8fc 40%
+                );
+        }
 
-    color:#ff88b6;
 
-    margin-bottom:25px;
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
 
-}
+            align-items: center;
+            justify-content: space-between;
 
+            gap: 60px;
+        }
 
-.hero-text p{
 
-    font-size:20px;
-    margin-bottom:35px;
+        .hero-text {
+            flex: 1;
+            min-width: 320px;
+        }
 
-}
 
+        .hero-text h1 {
+            font-size: 54px;
+            line-height: 1.2;
 
+            color: #ff88b6;
 
-.button{
+            margin-bottom: 25px;
+        }
 
-    display:inline-block;
 
-    background:#fe79ad;
+        .hero-text p {
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
 
-    color:white;
 
-    padding:16px 34px;
+        /* =========================
+           Button
+        ========================= */
 
-    border-radius:50px;
+        .button {
+            display: inline-block;
 
-    font-weight:bold;
+            background: #fe79ad;
+            color: #fff;
 
-    transition:.3s;
+            padding: 16px 34px;
 
-}
+            border-radius: 50px;
 
+            font-weight: 700;
 
-.button:hover{
+            transition: 0.3s;
+        }
 
-    background:#fbabca;
 
-    transform:translateY(-3px);
+        .button:hover {
+            background: #fbabca;
 
-}
+            transform: translateY(-3px);
+        }
 
 
+        /* =========================
+           Hero Phone
+        ========================= */
 
-/* Phone */
+        .hero-image {
+            flex: 1;
+            text-align: center;
 
-.hero-image{
+            opacity: 0;
 
-    flex:1;
-    text-align:center;
+            transform:
+                translateY(60px)
+                scale(0.96);
 
-    opacity:0;
-    transform:translateY(60px) scale(.96);
+            animation:
+                phoneAppear 1.4s
+                cubic-bezier(.22, 1, .36, 1)
+                forwards;
 
-    animation:phoneAppear 1.4s cubic-bezier(.22,1,.36,1) forwards;
+            animation-delay: 0.5s;
+        }
 
-    animation-delay:.5s;
 
-}
+        @keyframes phoneAppear {
 
- /*　contact */   
-    
-.contact-section{
-    text-align:center;
-    padding:90px 0;
-}
+            from {
+                opacity: 0;
 
-.contact-section p{
-    margin-bottom:30px;
-    color:#666;
-}
+                transform:
+                    translateY(60px)
+                    scale(0.96);
+            }
 
-@keyframes phoneAppear{
+            to {
+                opacity: 1;
 
-from{
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
 
-    opacity:0;
-    transform:translateY(60px) scale(.96);
+        }
 
-}
 
-to{
+        .phone {
+            width: 320px;
+            height: 640px;
 
-    opacity:1;
-    transform:translateY(0) scale(1);
+            border-radius: 40px;
 
-}
+            background: #fff;
 
-}
+            box-shadow:
+                0 20px 50px
+                rgba(0, 0, 0, 0.12);
 
+            overflow: hidden;
 
-.phone{
+            padding: 15px;
 
-    width:320px;
-    height:640px;
+            margin: 0 auto;
+        }
 
-    border-radius:40px;
 
-    background:white;
+        .phone img {
+            width: 100%;
+            height: 100%;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.12);
+            object-fit: cover;
 
-    overflow:hidden;
+            border-radius: 28px;
+        }
 
-    padding:15px;
 
-    margin:auto;
+        /* =========================
+           Section
+        ========================= */
 
-}
+        section {
+            padding: 90px 0;
+        }
 
 
+        h2 {
+            text-align: center;
 
-.phone img{
+            font-size: 38px;
 
-    width:100%;
-    height:100%;
+            color: #ff88b6;
 
-    object-fit:cover;
+            margin-bottom: 50px;
+        }
 
-    border-radius:28px;
 
-}
+        /* =========================
+           About
+        ========================= */
 
+        .about {
+            text-align: center;
 
+            max-width: 900px;
 
+            margin: 0 auto;
 
-/* Section */
+            font-size: 20px;
+        }
 
-section{
 
-    padding:90px 0;
+        .features {
+            display: grid;
 
-}
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(240px, 1fr)
+                );
 
+            gap: 30px;
 
-h2{
+            margin-top: 60px;
+        }
 
-    text-align:center;
 
-    font-size:38px;
+        .card {
+            background: #fff;
 
-    color:#ff88b6;
+            border-radius: 25px;
 
-    margin-bottom:50px;
+            padding: 35px;
 
-}
+            box-shadow:
+                0 10px 30px
+                rgba(238, 139, 176, 0.12);
+        }
 
 
+        .card h3 {
+            color: #ff88b6;
 
+            margin-bottom: 15px;
+        }
 
-/* About */
 
-.about{
+        /* =========================
+           Apps
+        ========================= */
 
-    text-align:center;
+        .apps {
+            display: grid;
 
-    max-width:900px;
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(260px, 1fr)
+                );
 
-    margin:auto;
+            gap: 30px;
+        }
 
-    font-size:20px;
 
-}
+        .app {
+            background: #fff;
 
+            border-radius: 25px;
 
+            overflow: hidden;
 
+            box-shadow:
+                0 10px 30px
+                rgba(238, 139, 176, 0.12);
 
-.features{
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
+        }
 
-    display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+        .app:hover {
+            transform: translateY(-5px);
 
-    gap:30px;
+            box-shadow:
+                0 15px 35px
+                rgba(238, 139, 176, 0.18);
+        }
 
-    margin-top:60px;
 
-}
+        /*
+         * Apple Storeリンクのカード
+         */
 
+        .app-link {
+            display: block;
+        }
 
 
-.card{
+        .app img {
+            width: 100%;
+            height: 220px;
 
-    background:white;
+            object-fit: cover;
+        }
 
-    border-radius:25px;
 
-    padding:35px;
+        .app-body {
+            padding: 25px;
+        }
 
-    box-shadow:0 10px 30px rgba(238,139,176,.12);
 
-}
+        .app h3 {
+            color: #ff88b6;
 
+            margin-bottom: 10px;
 
+            font-size: 22px;
+        }
 
-.card h3{
 
-    color:#ff88b6;
+        .app p {
+            color: #555;
+        }
 
-    margin-bottom:15px;
 
-}
+        /*
+         * Coming Soon
+         */
 
+        .coming-soon-image {
+            width: 100%;
+            height: 220px;
 
+            display: flex;
 
+            align-items: center;
+            justify-content: center;
 
-/* Apps */
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe1ed,
+                    #fff4f8
+                );
 
+            color: #ff88b6;
 
-.apps{
+            font-size: 24px;
+            font-weight: 800;
+        }
 
-    display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        /* =========================
+           Contact
+        ========================= */
 
-    gap:30px;
+        .contact-section {
+            text-align: center;
 
-}
+            padding: 90px 0;
+        }
 
 
-.app{
+        .contact-section p {
+            margin-bottom: 30px;
 
-    background:white;
+            color: #666;
+        }
 
-    border-radius:25px;
 
-    overflow:hidden;
+        /* =========================
+           Footer
+        ========================= */
 
-    box-shadow:0 10px 30px rgba(238,139,176,.12);
+        footer {
+            background: #fff;
 
-}
+            border-top:
+                1px solid #f8dce8;
 
+            padding: 35px;
 
-.app img{
+            text-align: center;
 
-    width:100%;
+            color: #777;
+        }
 
-    height:220px;
 
-    object-fit:cover;
+        .social-links {
+            display: flex;
 
-}
+            justify-content: center;
 
+            gap: 30px;
 
-.app-body{
+            margin-bottom: 20px;
+        }
 
-    padding:25px;
 
-}
+        .social-links a {
+            color: #ee8bb0;
 
+            font-weight: 700;
 
-.app h3{
+            transition: 0.3s;
+        }
 
-    color:#ff88b6;
 
-    margin-bottom:10px;
+        .social-links a:hover {
+            opacity: 0.7;
+        }
 
-}
 
+        .footer-links {
+            display: flex;
 
+            justify-content: center;
 
-/* Footer */
+            gap: 25px;
 
-footer{
+            margin-bottom: 20px;
+        }
 
-    background:white;
 
-    border-top:1px solid #f8dce8;
+        .footer-links a {
+            color: #777;
 
-    padding:35px;
+            font-size: 14px;
 
-    text-align:center;
+            transition: 0.3s;
+        }
 
-    color:#777;
 
-}
+        .footer-links a:hover {
+            color: #ff88b6;
+        }
 
-.social-links{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin-bottom:20px;
-}
 
-.social-links a{
-    color:#ee8bb0;
-    font-weight:700;
-    transition:.3s;
-}
+        .copyright {
+            color: #999;
 
-.social-links a:hover{
-    opacity:.7;
-}
+            font-size: 13px;
+        }
 
-.footer-links{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-bottom:20px;
-}
 
-.footer-links a{
-    color:#777;
-    font-size:14px;
-}
+        /* =========================
+           Smartphone
+        ========================= */
 
-.copyright{
-    color:#999;
-    font-size:13px;
-}
+        @media screen and (max-width: 768px) {
 
 
+            .container {
+                width: 100%;
 
-/* Smartphone */
+                padding-left: 20px;
+                padding-right: 20px;
+            }
 
-@media screen and (max-width:768px){
 
+            /*
+             * スマホではナビゲーションを非表示
+             */
 
-.container{
+            nav {
+                display: none;
+            }
 
-    width:100%;
 
-    padding:0 20px;
+            /* Hero */
 
-}
+            .hero {
+                padding: 60px 0;
+            }
 
 
-nav{
+            .hero-content {
+                flex-direction: column-reverse;
 
-    display:none;
+                text-align: center;
 
-}
+                gap: 35px;
+            }
 
 
-.hero{
+            .hero-text {
+                min-width: 0;
 
-    padding:60px 0;
+                width: 100%;
+            }
 
-}
 
+            .hero-text h1 {
+                font-size: 34px;
 
-.hero-content{
+                line-height: 1.25;
+            }
 
-    flex-direction:column-reverse;
 
-    text-align:center;
+            .hero-text p {
+                font-size: 16px;
+            }
 
-    gap:35px;
 
-}
+            .button {
+                width: 100%;
 
+                max-width: 280px;
+            }
 
 
-.hero-text h1{
+            /* Phone */
 
-    font-size:34px;
+            .phone {
+                width: 240px;
+                height: 490px;
+            }
 
-}
 
+            /* Sections */
 
+            section {
+                padding: 60px 0;
+            }
 
-.hero-text p{
 
-    font-size:16px;
+            h2 {
+                font-size: 30px;
 
-}
+                margin-bottom: 35px;
+            }
 
 
+            /* About */
 
-.button{
+            .about {
+                font-size: 16px;
+            }
 
-    width:100%;
 
-    max-width:280px;
+            .features {
+                grid-template-columns: 1fr;
 
-}
+                margin-top: 40px;
+            }
 
 
+            /* Apps */
 
-.phone{
+            .apps {
+                grid-template-columns: 1fr;
 
-    width:240px;
+                gap: 25px;
+            }
 
-    height:490px;
 
-}
+            .app img,
+            .coming-soon-image {
+                height: 200px;
+            }
 
 
+            .app-body {
+                padding: 22px;
+            }
 
-section{
 
-    padding:60px 0;
+            /* Contact */
 
-}
+            .contact-section {
+                padding: 60px 0;
+            }
 
 
+            /* Footer */
 
-h2{
+            footer {
+                font-size: 13px;
 
-    font-size:30px;
+                padding:
+                    30px
+                    20px;
+            }
 
-}
 
+            .social-links {
+                gap: 22px;
+            }
 
 
-.about{
+            .footer-links {
+                flex-wrap: wrap;
 
-    font-size:16px;
+                gap: 15px;
+            }
 
-}
+        }
 
-
-
-.features{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.apps{
-
-    grid-template-columns:1fr;
-
-}
-
-
-.app img{
-
-    height:200px;
-
-}
-
-
-footer{
-
-    font-size:13px;
-
-}
-
-.social-links{
-        gap:22px;
-    }
-
-    .footer-links{
-        flex-wrap:wrap;
-        gap:15px;
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -612,316 +750,401 @@ footer{
 <body>
 
 
-<header>
+    <!-- =========================
+         Header
+    ========================= -->
 
-<div class="container">
+    <header>
 
-<div class="logo">
-naponoa inc.
-</div>
+        <div class="container">
 
+            <div class="logo">
+                naponoa inc.
+            </div>
 
-<nav>
 
-<a href="about.html">About</a>
+            <nav>
 
-<a href="#apps">Apps</a>
+                <a href="about.html">
+                    About
+                </a>
 
-<a href="privacy.html">Privacy Policy</a>
+                <a href="#apps">
+                    Apps
+                </a>
 
-</nav>
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
 
+            </nav>
 
-</div>
+        </div>
 
-</header>
+    </header>
 
 
 
+    <!-- =========================
+         Hero
+    ========================= -->
 
-<section class="hero">
+    <section class="hero">
 
+        <div class="container hero-content">
 
-<div class="container hero-content">
 
+            <div class="hero-text">
 
-<div class="hero-text">
+                <h1>
+                    Creating Apps<br>
+                    That Brighten Your Day.
+                </h1>
 
 
-<h1>
-Creating Apps<br>
-That Brighten Your Day.
-</h1>
+                <p>
+                    毎日をもっと楽しく、もっとかわいく。<br>
+                    iPhoneアプリの企画・デザイン・開発・運営を行っています。
+                </p>
 
 
-<p>
-
-毎日をもっと楽しく、もっとかわいく。<br>
-iPhoneアプリの企画・デザイン・開発・運営を行っています。
-
-</p>
-
-
-<a href="#apps" class="button">
-
-配信中アプリを見る
-
-</a>
-
-
-</div>
-
-
-
-<div class="hero-image">
-
-
-<div class="phone">
-
-<img src="images/app_01.jpg" alt="App Screenshot">
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<section>
-
-
-<div class="container">
-
-
-<h2>
-About
-</h2>
-
-
-<div class="about">
-
-企画からデザイン、開発、App Store公開、運営まで
-一貫して行っています。<br>
-
-毎日が少し楽しくなるようなアプリ体験を提供します。
-
-</div>
-
-
-
-<div class="features">
-
-
-<div class="card">
-
-<h3>📱 App Development</h3>
-
-<p>
-iPhoneアプリの企画・開発
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>🎨 UI / UX Design</h3>
-
-<p>
-かわいく使いやすいデザイン制作
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>🚀 App Operation</h3>
-
-<p>
-公開後の改善・アップデート運営
-</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section id="apps">
-
-
-<div class="container">
-
-
-<h2>
-Our Apps
-</h2>
-
-```html
-<section id="apps">
-
-    <div class="container">
-
-        <h2>Our Apps</h2>
-
-        <div class="apps">
-
-            <!-- napoCam -->
-            <div class="app">
-
-                <a href="https://apps.apple.com/jp/app/napocam/id6795475312"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img src="images/IMG_3601.JPG" alt="napoCam">
-
-                    <div class="app-body">
-
-                        <h3>napoCam</h3>
-
-                        <p>
-                            フィルターカメラ
-                        </p>
-
-                    </div>
-
+                <a href="#apps" class="button">
+                    配信中アプリを見る
                 </a>
 
             </div>
 
 
-            <!-- Coming Soon -->
-            <div class="app">
 
-                <img src="images/coming-soon.jpg" alt="Coming Soon">
+            <div class="hero-image">
 
-                <div class="app-body">
+                <div class="phone">
 
-                    <h3>Coming Soon</h3>
-
-                    <p>
-                        Coming Soon
-                    </p>
+                    <img
+                        src="images/app_01.jpg"
+                        alt="naponoa app screenshot"
+                    >
 
                 </div>
 
             </div>
 
 
-            <!-- 潮干狩りゲーム -->
-            <div class="app">
+        </div>
 
-                <a href="https://apps.apple.com/app/%E6%BD%AE%E5%B9%B2%E7%8B%A9%E3%82%8A%E3%82%B2%E3%83%BC%E3%83%A0/id6796900479"
-                   target="_blank"
-                   rel="noopener noreferrer">
+    </section>
 
-                    <img src="game.jpg" alt="潮干狩りゲーム">
+
+
+    <!-- =========================
+         About
+    ========================= -->
+
+    <section>
+
+        <div class="container">
+
+
+            <h2>
+                About
+            </h2>
+
+
+            <div class="about">
+
+                企画からデザイン、開発、App Store公開、運営まで
+                一貫して行っています。<br>
+
+                毎日が少し楽しくなるようなアプリ体験を提供します。
+
+            </div>
+
+
+
+            <div class="features">
+
+
+                <div class="card">
+
+                    <h3>
+                        📱 App Development
+                    </h3>
+
+                    <p>
+                        iPhoneアプリの企画・開発
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>
+                        🎨 UI / UX Design
+                    </h3>
+
+                    <p>
+                        かわいく使いやすいデザイン制作
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>
+                        🚀 App Operation
+                    </h3>
+
+                    <p>
+                        公開後の改善・アップデート運営
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         Our Apps
+    ========================= -->
+
+    <section id="apps">
+
+        <div class="container">
+
+
+            <h2>
+                Our Apps
+            </h2>
+
+
+            <div class="apps">
+
+
+                <!-- napoCam -->
+
+                <div class="app">
+
+                    <a
+                        class="app-link"
+                        href="https://apps.apple.com/jp/app/napocam/id6795475312"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <img
+                            src="images/IMG_3601.JPG"
+                            alt="napoCam"
+                        >
+
+
+                        <div class="app-body">
+
+                            <h3>
+                                napoCam
+                            </h3>
+
+                            <p>
+                                フィルターカメラ
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Coming Soon -->
+
+                <div class="app">
+
+                    <div class="coming-soon-image">
+                        Coming Soon
+                    </div>
+
 
                     <div class="app-body">
 
-                        <h3>潮干狩りゲーム</h3>
+                        <h3>
+                            Coming Soon
+                        </h3>
 
                         <p>
-                            30秒で遊べるカジュアルゲーム。
+                            Coming Soon
                         </p>
 
                     </div>
 
-                </a>
+                </div>
+
+
+
+                <!-- 潮干狩りゲーム -->
+
+                <div class="app">
+
+                    <a
+                        class="app-link"
+                        href="https://apps.apple.com/app/%E6%BD%AE%E5%B9%B2%E7%8B%A9%E3%82%8A%E3%82%B2%E3%83%BC%E3%83%A0/id6796900479"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <img
+                            src="game.jpg"
+                            alt="潮干狩りゲーム"
+                        >
+
+
+                        <div class="app-body">
+
+                            <h3>
+                                潮干狩りゲーム
+                            </h3>
+
+                            <p>
+                                30秒で遊べるカジュアルゲーム。
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
 
             </div>
 
+
         </div>
 
-    </div>
-
-</section>
-```
-
-<section class="contact-section">
-
-    <div class="container">
-
-        <h2>Contact</h2>
-
-        <p>
-            アプリに関するお問い合わせ、その他ご連絡はこちらからお願いいたします。
-        </p>
-
-        <a href="mailto:YOUR_EMAIL@example.com" class="button">
-            お問い合わせ
-        </a>
-
-    </div>
-
-</section>
+    </section>
 
 
-<footer>
 
-    <div class="container">
+    <!-- =========================
+         Contact
+    ========================= -->
 
-        <div class="social-links">
+    <section class="contact-section">
 
-            <a href="https://x.com/naponoa.inc"
-               target="_blank"
-               rel="noopener noreferrer">
-                X
+        <div class="container">
+
+
+            <h2>
+                Contact
+            </h2>
+
+
+            <p>
+                アプリに関するお問い合わせ、その他ご連絡はこちらからお願いいたします。
+            </p>
+
+
+            <a
+                href="mailto:YOUR_EMAIL@example.com"
+                class="button"
+            >
+                お問い合わせ
             </a>
 
-            <a href="https://www.instagram.com/naponoa.inc"
-               target="_blank"
-               rel="noopener noreferrer">
-                Instagram
-            </a>
-
-<!--            <a href="https://www.tiktok.com/@naponoa.inc"
-               target="_blank"
-               rel="noopener noreferrer">
-                TikTok
-            </a>-->
 
         </div>
 
+    </section>
 
-        <div class="footer-links">
 
-            <a href="about.html">About</a>
 
-            <a href="index.html#apps">Apps</a>
+    <!-- =========================
+         Footer
+    ========================= -->
 
-            <a href="privacy.html">Privacy Policy</a>
+    <footer>
+
+        <div class="container">
+
+
+            <div class="social-links">
+
+
+                <a
+                    href="https://x.com/naponoa.inc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    X
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/naponoa.inc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+
+                <!-- TikTok
+                <a
+                    href="https://www.tiktok.com/@naponoa.inc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    TikTok
+                </a>
+                -->
+
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="index.html#apps">
+                    Apps
+                </a>
+
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+
+            </div>
+
+
+
+            <p class="copyright">
+                © 2026 naponoa
+            </p>
+
 
         </div>
 
-
-        <p class="copyright">
-            © 2026 naponoa
-        </p>
-
-    </div>
-
-</footer>
+    </footer>
 
 
 </body>
+
 </html>
+```
