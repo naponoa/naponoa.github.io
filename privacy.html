@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ja">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Privacy Policy | naponoa</title>
@@ -21,6 +24,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:"Nunito",sans-serif;
     background:#fff8fc;
@@ -29,7 +36,7 @@ body{
 }
 
 a{
-    color:#ee8bb0;
+    color:#ff88b6;
     text-decoration:none;
 }
 
@@ -40,40 +47,68 @@ a{
 }
 
 
-/* Header */
+/* =========================
+   Header
+   ========================= */
 
 header{
+    position:sticky;
+    top:0;
+    z-index:100;
+
     background:rgba(255,255,255,.9);
+
     backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
     border-bottom:1px solid #f8dce8;
 }
 
 header .container{
     max-width:1200px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:18px 0;
 }
 
 .logo{
     font-size:28px;
     font-weight:800;
-    color:#ee8bb0;
+    color:#ff88b6;
+}
+
+nav{
+    display:flex;
+    align-items:center;
 }
 
 nav a{
     margin-left:30px;
     color:#444;
     font-weight:700;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:#ee8bb0;
+    color:#ff88b6;
 }
 
 
-/* Page Title */
+/* =========================
+   Smartphone Floating Navigation
+   ========================= */
+
+.mobile-nav{
+    display:none;
+}
+
+
+/* =========================
+   Page Title
+   ========================= */
 
 .page-title{
     text-align:center;
@@ -81,7 +116,7 @@ nav a:hover{
 }
 
 .page-title h1{
-    color:#ee8bb0;
+    color:#ff88b6;
     font-size:46px;
     margin-bottom:15px;
 }
@@ -91,19 +126,29 @@ nav a:hover{
 }
 
 
-/* Policy */
+/* =========================
+   Policy
+   ========================= */
 
 .policy{
     background:#fff;
+
     border-radius:30px;
+
     padding:55px;
-    box-shadow:0 10px 30px rgba(238,139,176,.10);
+
+    box-shadow:
+        0 10px 30px
+        rgba(238,139,176,.10);
+
     margin-bottom:80px;
 }
 
 .policy h2{
-    color:#ee8bb0;
+    color:#ff88b6;
+
     font-size:25px;
+
     margin-top:45px;
     margin-bottom:15px;
 }
@@ -114,6 +159,7 @@ nav a:hover{
 
 .policy h3{
     font-size:18px;
+
     margin-top:25px;
     margin-bottom:10px;
 }
@@ -132,20 +178,72 @@ nav a:hover{
 
 .updated{
     margin-top:45px;
+
     padding-top:25px;
+
     border-top:1px solid #f3dce6;
+
     color:#777;
+
     font-size:14px;
 }
 
 
-/* Footer */
+/* =========================
+   Back To Top
+   ========================= */
+
+.back-to-top{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:60px;
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#ff88b6;
+    color:#fff;
+
+    border-radius:22px;
+
+    font-size:14px;
+    font-weight:800;
+
+    box-shadow:
+        0 6px 18px
+        rgba(238,139,176,.3);
+
+    z-index:999;
+
+    transition:.3s;
+}
+
+.back-to-top:hover{
+    background:#fbabca;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   Footer
+   ========================= */
 
 footer{
     background:#fff;
+
     border-top:1px solid #f8dce8;
+
     padding:35px;
+
     text-align:center;
+
     color:#777;
 }
 
@@ -155,7 +253,9 @@ footer a{
 }
 
 
-/* Smartphone */
+/* =========================
+   Smartphone
+   ========================= */
 
 @media screen and (max-width:768px){
 
@@ -163,46 +263,145 @@ footer a{
         padding:15px 20px;
     }
 
+
     .logo{
         font-size:24px;
     }
+
+
+    /* PC navigation hidden */
 
     nav{
         display:none;
     }
 
+
     .container{
         width:100%;
+
         padding:0 20px;
     }
+
+
+    /* =========================
+       Smartphone Floating Navigation
+       ========================= */
+
+    .mobile-nav{
+        position:fixed;
+
+        top:15px;
+        right:15px;
+
+        display:flex;
+
+        align-items:center;
+
+        gap:4px;
+
+        background:
+            rgba(255,255,255,.92);
+
+        backdrop-filter:blur(15px);
+        -webkit-backdrop-filter:blur(15px);
+
+        padding:7px 9px;
+
+        border:1px solid #f8dce8;
+
+        border-radius:30px;
+
+        box-shadow:
+            0 6px 20px
+            rgba(238,139,176,.15);
+
+        z-index:1000;
+    }
+
+
+    .mobile-nav a{
+        color:#ff88b6;
+
+        font-size:11px;
+
+        font-weight:700;
+
+        padding:5px 6px;
+
+        white-space:nowrap;
+    }
+
+
+    .mobile-nav a:active{
+        opacity:.6;
+    }
+
+
+    /* =========================
+       Page Title
+       ========================= */
 
     .page-title{
         padding:60px 0 35px;
     }
 
+
     .page-title h1{
         font-size:34px;
     }
 
+
+    /* =========================
+       Policy
+       ========================= */
+
     .policy{
         padding:30px 22px;
+
         border-radius:22px;
+
         margin-bottom:50px;
     }
 
+
     .policy h2{
         font-size:22px;
+
         margin-top:35px;
     }
+
 
     .policy h3{
         font-size:17px;
     }
 
+
     .policy p,
     .policy li{
         font-size:15px;
     }
+
+
+    /* =========================
+       Back To Top
+       ========================= */
+
+    .back-to-top{
+        right:18px;
+        bottom:18px;
+
+        width:58px;
+        height:42px;
+
+        font-size:13px;
+
+        border-radius:21px;
+    }
+
+
+    /* =========================
+       Footer
+       ========================= */
 
     footer{
         font-size:13px;
@@ -214,27 +413,33 @@ footer a{
 
 </head>
 
+<body id="top">
 
-<body>
-
+<!-- =========================
+     Header
+     ========================= -->
 
 <header>
 
 <div class="container">
 
 <div class="logo">
-naponoa
+naponoa.inc
 </div>
 
 <nav>
 
-<a href="index.html">Home</a>
+<a href="index.html">
+Home
+</a>
 
-<a href="about.html">About</a>
+<a href="about.html">
+About
+</a>
 
-<a href="index.html#apps">Apps</a>
-
-<a href="privacy.html">Privacy Policy</a>
+<a href="index.html#apps">
+Apps
+</a>
 
 </nav>
 
@@ -242,21 +447,67 @@ naponoa
 
 </header>
 
+<!-- =========================
+     Smartphone Floating Navigation
+     ========================= -->
 
+<div class="mobile-nav">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="index.html#apps">
+Apps
+</a>
+
+
+</div>
+
+<!-- =========================
+     Back To Top
+     ========================= -->
+
+<a
+href="#top"
+class="back-to-top"
+aria-label="ページの上部へ戻る"
+
+>
+
+```
+▲ TOP
+```
+
+</a>
+
+<!-- =========================
+     Page Title
+     ========================= -->
 
 <section class="page-title">
 
 <div class="container">
 
-<h1>Privacy Policy</h1>
+<h1>
+Privacy Policy
+</h1>
 
-<p>プライバシーポリシー</p>
+<p>
+プライバシーポリシー
+</p>
 
 </div>
 
 </section>
 
-
+<!-- =========================
+     Privacy Policy
+     ========================= -->
 
 <main>
 
@@ -264,8 +515,9 @@ naponoa
 
 <div class="policy">
 
-
-<h2>1. はじめに</h2>
+<h2>
+1. はじめに
+</h2>
 
 <p>
 naponoa（以下「当方」といいます。）は、当方が提供するウェブサイト、アプリケーションおよび関連サービス（以下「サービス」といいます。）における、ユーザーの個人情報および各種データの取り扱いについて、以下のとおり定めます。
@@ -275,25 +527,41 @@ naponoa（以下「当方」といいます。）は、当方が提供するウ�
 当方は、ユーザーのプライバシーを尊重し、取得した情報を適切に取り扱うよう努めます。
 </p>
 
-
-
-<h2>2. 取得する情報</h2>
+<h2>
+2. 取得する情報
+</h2>
 
 <p>
 当方は、サービスの提供および改善のため、必要な範囲で以下の情報を取得する場合があります。
 </p>
 
 <ul>
-<li>端末に関する情報</li>
-<li>OS、アプリのバージョン等の情報</li>
-<li>サービスの利用状況に関する情報</li>
-<li>クラッシュ、エラー等の診断情報</li>
-<li>お問い合わせ時にユーザーが提供する情報</li>
+
+<li>
+端末に関する情報
+</li>
+
+<li>
+OS、アプリのバージョン等の情報
+</li>
+
+<li>
+サービスの利用状況に関する情報
+</li>
+
+<li>
+クラッシュ、エラー等の診断情報
+</li>
+
+<li>
+お問い合わせ時にユーザーが提供する情報
+</li>
+
 </ul>
 
-
-
-<h2>3. 写真・画像データについて</h2>
+<h2>
+3. 写真・画像データについて
+</h2>
 
 <p>
 当方が提供する写真撮影・写真加工等の機能では、ユーザーが選択または撮影した写真・画像へのアクセスが必要となる場合があります。
@@ -311,9 +579,9 @@ naponoa（以下「当方」といいます。）は、当方が提供するウ�
 写真・画像データについて、サービス上必要な処理を端末上で行う機能については、原則として端末内で処理されます。
 </p>
 
-
-
-<h2>4. Face Data（顔データ）について</h2>
+<h2>
+4. Face Data（顔データ）について
+</h2>
 
 <p>
 当方が提供する一部の写真加工機能では、写真に含まれる顔の位置、輪郭、目、その他の顔の特徴に関する情報を、写真加工機能を提供するために使用する場合があります。
@@ -335,9 +603,9 @@ naponoa（以下「当方」といいます。）は、当方が提供するウ�
 なお、アプリによって実装されている機能や処理方法が異なる場合があります。各アプリにおける具体的なデータの取り扱いについては、各アプリのプライバシーポリシーまたはApp Store上のプライバシー情報をご確認ください。
 </p>
 
-
-
-<h2>5. Analytics（利用状況の分析）</h2>
+<h2>
+5. Analytics（利用状況の分析）
+</h2>
 
 <p>
 当方は、サービスの品質向上、機能改善、障害の調査および利用状況の把握を目的として、Analytics等の分析サービスを利用する場合があります。
@@ -351,9 +619,9 @@ naponoa（以下「当方」といいます。）は、当方が提供するウ�
 Analyticsによって取得した情報は、サービスの利用状況を把握し、ユーザー体験を改善する目的で利用します。
 </p>
 
-
-
-<h2>6. 広告について</h2>
+<h2>
+6. 広告について
+</h2>
 
 <p>
 当方は、サービスによっては広告配信サービスを利用する場合があります。
@@ -367,41 +635,73 @@ Analyticsによって取得した情報は、サービスの利用状況を把�
 当方は、ユーザーの写真や顔データを広告配信の目的で利用することはありません。
 </p>
 
-
-
-<h2>7. 個人情報の利用目的</h2>
+<h2>
+7. 個人情報の利用目的
+</h2>
 
 <p>
 当方が取得した個人情報は、以下の目的で利用します。
 </p>
 
 <ul>
-<li>サービスの提供および運営</li>
-<li>サービスの改善および新機能の開発</li>
-<li>障害、エラー等の調査および対応</li>
-<li>お問い合わせへの対応</li>
-<li>重要なお知らせ等の連絡</li>
-<li>不正利用の防止</li>
+
+<li>
+サービスの提供および運営
+</li>
+
+<li>
+サービスの改善および新機能の開発
+</li>
+
+<li>
+障害、エラー等の調査および対応
+</li>
+
+<li>
+お問い合わせへの対応
+</li>
+
+<li>
+重要なお知らせ等の連絡
+</li>
+
+<li>
+不正利用の防止
+</li>
+
 </ul>
 
-
-
-<h2>8. 第三者への提供</h2>
+<h2>
+8. 第三者への提供
+</h2>
 
 <p>
 当方は、以下の場合を除き、ユーザーの個人情報を本人の同意なく第三者へ提供しません。
 </p>
 
 <ul>
-<li>ユーザーの同意がある場合</li>
-<li>法令に基づく場合</li>
-<li>人の生命、身体または財産の保護のために必要であり、本人の同意を得ることが困難な場合</li>
-<li>サービスの提供に必要な範囲で、業務委託先等に提供する場合</li>
+
+<li>
+ユーザーの同意がある場合
+</li>
+
+<li>
+法令に基づく場合
+</li>
+
+<li>
+人の生命、身体または財産の保護のために必要であり、本人の同意を得ることが困難な場合
+</li>
+
+<li>
+サービスの提供に必要な範囲で、業務委託先等に提供する場合
+</li>
+
 </ul>
 
-
-
-<h2>9. 外部サービスについて</h2>
+<h2>
+9. 外部サービスについて
+</h2>
 
 <p>
 当方のサービスでは、機能提供や分析等のため、第三者が提供するサービスを利用する場合があります。
@@ -411,25 +711,25 @@ Analyticsによって取得した情報は、サービスの利用状況を把�
 これらの外部サービス提供者が独自に情報を取得する場合があります。具体的な取り扱いについては、各サービス提供者のプライバシーポリシーをご確認ください。
 </p>
 
-
-
-<h2>10. データの安全管理</h2>
+<h2>
+10. データの安全管理
+</h2>
 
 <p>
 当方は、取得した情報について、不正アクセス、紛失、漏えい、改ざん等を防止するため、合理的かつ適切な安全管理措置を講じます。
 </p>
 
-
-
-<h2>11. 子どものプライバシー</h2>
+<h2>
+11. 子どものプライバシー
+</h2>
 
 <p>
 当方は、法令により特別な取り扱いが必要となる年齢のユーザーについて、適用される法令およびガイドラインに従ってサービスを提供します。
 </p>
 
-
-
-<h2>12. ユーザーによる情報の管理</h2>
+<h2>
+12. ユーザーによる情報の管理
+</h2>
 
 <p>
 ユーザーは、端末の設定からカメラ、写真、通知等の各種権限を変更することができます。
@@ -439,9 +739,9 @@ Analyticsによって取得した情報は、サービスの利用状況を把�
 ただし、権限を拒否した場合、一部のサービス機能が利用できなくなる場合があります。
 </p>
 
-
-
-<h2>13. プライバシーポリシーの変更</h2>
+<h2>
+13. プライバシーポリシーの変更
+</h2>
 
 <p>
 当方は、法令の改正、サービス内容の変更その他必要に応じて、本プライバシーポリシーを変更することがあります。
@@ -451,19 +751,19 @@ Analyticsによって取得した情報は、サービスの利用状況を把�
 重要な変更がある場合には、当方のウェブサイトまたはサービス上でお知らせします。
 </p>
 
-
-
-<h2>14. お問い合わせ</h2>
+<h2>
+14. お問い合わせ
+</h2>
 
 <p>
 本プライバシーポリシーに関するお問い合わせは、以下の窓口までご連絡ください。
 </p>
 
 <p>
-<a href="mailto:naponoa.inc@gmail.com">お問い合わせ</a>
+<a href="mailto:naponoa.inc@gmail.com">
+お問い合わせ
+</a>
 </p>
-
-
 
 <div class="updated">
 
@@ -472,31 +772,22 @@ Analyticsによって取得した情報は、サービスの利用状況を把�
 
 </div>
 
-
 </div>
 
 </div>
 
 </main>
 
-
+<!-- =========================
+     Footer
+     ========================= -->
 
 <footer>
 
 © 2026 naponoa
 
-    <!--
-<br><br>
-
-<a href="index.html">Home</a>
-|
-<a href="about.html">About</a>
-|
-<a href="privacy.html">Privacy Policy</a>
--->
-    
 </footer>
 
-
 </body>
+
 </html>
