@@ -26,6 +26,7 @@
 
 html{
     min-height:100%;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -50,11 +51,20 @@ a{
 }
 
 
-/* Header */
+/* =========================
+   Header
+   ========================= */
 
 header{
+    position:sticky;
+    top:0;
+    z-index:100;
+
     background:rgba(255,255,255,.85);
+
     backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
     border-bottom:1px solid #f8dce8;
 }
 
@@ -71,13 +81,34 @@ header .container{
     color:#ff88b6;
 }
 
+nav{
+    display:flex;
+    align-items:center;
+}
+
 nav a{
     margin-left:30px;
     font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff88b6;
 }
 
 
-/* Hero */
+/* =========================
+   Smartphone Floating Navigation
+   ========================= */
+
+.mobile-nav{
+    display:none;
+}
+
+
+/* =========================
+   Hero
+   ========================= */
 
 .page-title{
     padding:80px 0 50px;
@@ -95,16 +126,24 @@ nav a{
 }
 
 
-/* Profile */
+/* =========================
+   Profile
+   ========================= */
 
 .profile{
     display:flex;
     align-items:center;
     gap:60px;
+
     background:white;
+
     padding:50px;
+
     border-radius:30px;
-    box-shadow:0 10px 30px rgba(238,139,176,.12);
+
+    box-shadow:
+        0 10px 30px
+        rgba(238,139,176,.12);
 }
 
 .profile-image{
@@ -132,14 +171,23 @@ nav a{
 }
 
 
-/* Message */
+/* =========================
+   Message
+   ========================= */
 
 .message{
     margin-top:50px;
+
     background:white;
+
     padding:45px;
+
     border-radius:30px;
-    box-shadow:0 10px 30px rgba(238,139,176,.12);
+
+    box-shadow:
+        0 10px 30px
+        rgba(238,139,176,.12);
+
     text-align:left;
 }
 
@@ -150,14 +198,21 @@ nav a{
 }
 
 
-/* Footer */
+/* =========================
+   Footer
+   ========================= */
 
 footer{
     margin-top:auto;
+
     background:white;
+
     border-top:1px solid #f8dce8;
+
     padding:35px;
+
     text-align:center;
+
     color:#777;
 }
 
@@ -166,7 +221,51 @@ footer{
 }
 
 
-/* Smartphone */
+/* =========================
+   Back To Top
+   ========================= */
+
+.back-to-top{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:60px;
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#ff88b6;
+    color:#fff;
+
+    border-radius:22px;
+
+    font-size:14px;
+    font-weight:800;
+
+    box-shadow:
+        0 6px 18px
+        rgba(238,139,176,.3);
+
+    z-index:999;
+
+    transition:.3s;
+}
+
+.back-to-top:hover{
+    background:#fbabca;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   Smartphone
+   ========================= */
 
 @media screen and (max-width:768px){
 
@@ -175,9 +274,71 @@ footer{
         padding:0 20px;
     }
 
+
+    /* PC navigation hidden */
+
     nav{
         display:none;
     }
+
+
+    /* =========================
+       Smartphone Floating Navigation
+       ========================= */
+
+    .mobile-nav{
+        position:fixed;
+
+        top:15px;
+        right:15px;
+
+        display:flex;
+
+        align-items:center;
+
+        gap:4px;
+
+        background:
+            rgba(255,255,255,.92);
+
+        backdrop-filter:blur(15px);
+        -webkit-backdrop-filter:blur(15px);
+
+        padding:7px 9px;
+
+        border:1px solid #f8dce8;
+
+        border-radius:30px;
+
+        box-shadow:
+            0 6px 20px
+            rgba(238,139,176,.15);
+
+        z-index:1000;
+    }
+
+
+    .mobile-nav a{
+        color:#ff88b6;
+
+        font-size:11px;
+
+        font-weight:700;
+
+        padding:5px 6px;
+
+        white-space:nowrap;
+    }
+
+
+    .mobile-nav a:active{
+        opacity:.6;
+    }
+
+
+    /* =========================
+       Page Title
+       ========================= */
 
     .page-title{
         padding:60px 0 35px;
@@ -187,9 +348,16 @@ footer{
         font-size:36px;
     }
 
+
+    /* =========================
+       Profile
+       ========================= */
+
     .profile{
         flex-direction:column;
+
         padding:30px 20px;
+
         gap:30px;
     }
 
@@ -205,13 +373,36 @@ footer{
         font-size:15px;
     }
 
+
+    /* =========================
+       Message
+       ========================= */
+
     .message{
         padding:30px 20px;
+
         text-align:left;
     }
 
     .message h2{
         font-size:25px;
+    }
+
+
+    /* =========================
+       Back To Top
+       ========================= */
+
+    .back-to-top{
+        right:18px;
+        bottom:18px;
+
+        width:58px;
+        height:42px;
+
+        font-size:13px;
+
+        border-radius:21px;
     }
 
 }
@@ -220,7 +411,11 @@ footer{
 
 </head>
 
-<body>
+<body id="top">
+
+<!-- =========================
+     Header
+     ========================= -->
 
 <header>
 
@@ -231,21 +426,81 @@ naponoa inc.
 </div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="index.html#apps">Apps</a>
-<a href="privacy.html">Privacy Policy</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="index.html#apps">
+Apps
+</a>
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
 </nav>
 
 </div>
 
 </header>
 
+<!-- =========================
+     Smartphone Floating Navigation
+     ========================= -->
+
+<div class="mobile-nav">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="index.html#apps">
+Apps
+</a>
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
+</div>
+
+<!-- =========================
+     Back To Top
+     ========================= -->
+
+<a
+href="#top"
+class="back-to-top"
+aria-label="ページの上部へ戻る"
+
+>
+
+
+▲ TOP
+
+
+</a>
+
+<!-- =========================
+     Page Title
+     ========================= -->
+
 <section class="page-title">
 
 <div class="container">
 
-<h1>About</h1>
+<h1>
+About
+</h1>
 
 <p>
 アプリ開発への取り組み
@@ -254,6 +509,10 @@ naponoa inc.
 </div>
 
 </section>
+
+<!-- =========================
+     Profile
+     ========================= -->
 
 <section>
 
@@ -269,7 +528,9 @@ naponoa inc.
 
 <div class="profile-text">
 
-<h2>Profile</h2>
+<h2>
+Profile
+</h2>
 
 <p>
 <b>Game Development</b><br>
@@ -298,13 +559,19 @@ IT企業にてWebディレクターとして、Webサービスの企画・改善
 
 </section>
 
+<!-- =========================
+     Vision
+     ========================= -->
+
 <section>
 
 <div class="container">
 
 <div class="message">
 
-<h2>Vision</h2>
+<h2>
+Vision
+</h2>
 
 <p>
 ゲーム開発、Web制作、サービス運営で培った経験を活かし、<br>
@@ -316,6 +583,10 @@ IT企業にてWebディレクターとして、Webサービスの企画・改善
 </div>
 
 </section>
+
+<!-- =========================
+     Footer
+     ========================= -->
 
 <footer>
 
