@@ -11,45 +11,45 @@
 <title>naponoa inc. | iPhoneアプリ開発・運営</title>
 
 <meta name="description"
-   content="naponoa inc.は、iPhoneアプリの企画・デザイン・開発・運営を行っています。写真加工アプリ、カメラアプリ、ゲームなど、毎日を楽しくするアプリを提供しています。">
+ content="naponoa inc.は、iPhoneアプリの企画・デザイン・開発・運営を行っています。写真加工アプリ、カメラアプリ、ゲームなど、毎日を楽しくするアプリを提供しています。">
 
 <meta name="keywords"
-   content="iPhoneアプリ開発,アプリ開発,スマホアプリ,カメラアプリ,写真加工アプリ,ゲームアプリ,iOS開発,naponoa inc.">
-
-<!-- Favicon -->
+ content="iPhoneアプリ開発,アプリ開発,スマホアプリ,カメラアプリ,写真加工アプリ,ゲームアプリ,iOS開発,naponoa inc.">
 
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 <!-- OGP -->
 
 <meta property="og:title"
-   content="naponoa inc. | iPhoneアプリ開発・運営">
+ content="naponoa inc. | iPhoneアプリ開発・運営">
 
 <meta property="og:description"
-   content="毎日をもっと楽しく、もっとかわいく。iPhoneアプリの企画・デザイン・開発・運営を行っています。">
+ content="毎日をもっと楽しく、もっとかわいく。iPhoneアプリの企画・デザイン・開発・運営を行っています。">
 
 <meta property="og:type" content="website">
 
 <meta property="og:url"
-   content="https://naponoa.github.io/naponoa/index.html">
+ content="https://naponoa.github.io/naponoa/index.html">
 
 <meta property="og:image"
-   content="https://naponoa.github.io/naponoa/ogp.jpg">
+ content="https://naponoa.github.io/naponoa/ogp.jpg">
 
-<meta property="og:site_name" content="naponoa inc.">
+<meta property="og:site_name"
+ content="naponoa inc.">
 
 <!-- Twitter Card -->
 
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card"
+ content="summary_large_image">
 
 <meta name="twitter:title"
-   content="naponoa inc. | iPhoneアプリ開発・運営">
+ content="naponoa inc. | iPhoneアプリ開発・運営">
 
 <meta name="twitter:description"
-   content="デザイン性と使いやすさを大切にしたiPhoneアプリを企画・開発しています。">
+ content="デザイン性と使いやすさを大切にしたiPhoneアプリを企画・開発しています。">
 
 <meta name="twitter:image"
-   content="https://naponoa.github.io/naponoa/ogp.jpg">
+ content="https://naponoa.github.io/naponoa/ogp.jpg">
 
 <!-- Google Fonts -->
 
@@ -133,13 +133,20 @@ header .container {
 }
 
 
+/* Logo Image */
+
 .logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #ff88b6;
     margin: 0 10px;
 }
 
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+
+/* Desktop Navigation */
 
 nav {
     display: flex;
@@ -654,6 +661,20 @@ footer {
 
 
     /* =========================
+       スマホ Logo
+       ========================= */
+
+    .logo {
+        margin: 0;
+    }
+
+
+    .logo img {
+        width: 120px;
+    }
+
+
+    /* =========================
        スマホ右上フロートナビ
        ========================= */
 
@@ -872,7 +893,7 @@ footer {
 
 </head>
 
-<body>
+<body id="top">
 
 <!-- =========================
      Header
@@ -880,32 +901,39 @@ footer {
 
 <header>
 
-
 <div class="container">
 
-    <div class="logo">
-        naponoa inc.
-    </div>
+<div class="logo">
 
+<a href="index.html">
 
-    <nav>
+<img
+src="images/logo_p.jpg"
+alt="naponoa inc."
 
-        <a href="about.html">
-            About
-        </a>
+>
 
-        <a href="#apps">
-            Apps
-        </a>
-
-        <a href="privacy.html">
-            Privacy Policy
-        </a>
-
-    </nav>
+</a>
 
 </div>
 
+<nav>
+
+<a href="about.html">
+About
+</a>
+
+<a href="#apps">
+Apps
+</a>
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
+</nav>
+
+</div>
 
 </header>
 
@@ -915,19 +943,21 @@ footer {
 
 <div class="mobile-nav">
 
+<a href="index.html">
+Home
+</a>
 
 <a href="about.html">
-    About
+About
 </a>
 
 <a href="index.html#apps">
-    Apps
+Apps
 </a>
 
 <a href="privacy.html">
-    Privacy Policy
+Privacy Policy
 </a>
-
 
 </div>
 
@@ -936,7 +966,7 @@ footer {
      ========================= -->
 
 <a
-href="#"
+href="#top"
 class="back-to-top"
 aria-label="ページの上部へ戻る"
 
@@ -954,50 +984,45 @@ aria-label="ページの上部へ戻る"
 
 <section class="hero">
 
-
 <div class="container hero-content">
 
+<div class="hero-text">
 
-    <div class="hero-text">
+<h1>
+Creating Apps<br>
+That Brighten Your Day.
+</h1>
 
-        <h1>
-            Creating Apps<br>
-            That Brighten Your Day.
-        </h1>
+<p>
+毎日をもっと楽しく、もっとかわいく。<br>
+iPhoneアプリの企画・デザイン・開発・運営を行っています。
+</p>
 
+<a
+href="#apps"
+class="button"
 
-        <p>
-            毎日をもっと楽しく、もっとかわいく。<br>
-            iPhoneアプリの企画・デザイン・開発・運営を行っています。
-        </p>
+>
 
-
-        <a
-            href="#apps"
-            class="button"
-        >
-            配信中アプリを見る
-        </a>
-
-    </div>
-
-
-    <div class="hero-image">
-
-        <div class="phone">
-
-            <img
-                src="images/app_01.jpg"
-                alt="naponoa app screenshot"
-            >
-
-        </div>
-
-    </div>
-
+配信中アプリを見る </a>
 
 </div>
 
+<div class="hero-image">
+
+<div class="phone">
+
+<img
+src="images/app_01.jpg"
+alt="naponoa app screenshot"
+
+>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1007,72 +1032,62 @@ aria-label="ページの上部へ戻る"
 
 <section>
 
-
 <div class="container">
 
+<h2>
+About
+</h2>
 
-    <h2>
-        About
-    </h2>
+<div class="about">
 
+企画からデザイン、開発、App Store公開、運営まで
+一貫して行っています。<br>
 
-    <div class="about">
-
-        企画からデザイン、開発、App Store公開、運営まで
-        一貫して行っています。<br>
-
-        毎日が少し楽しくなるようなアプリ体験を提供します。
-
-    </div>
-
-
-    <div class="features">
-
-
-        <div class="card">
-
-            <h3>
-                📱 App Development
-            </h3>
-
-            <p>
-                iPhoneアプリの企画・開発
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🎨 UI / UX Design
-            </h3>
-
-            <p>
-                かわいく使いやすいデザイン制作
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🚀 App Operation
-            </h3>
-
-            <p>
-                公開後の改善・アップデート運営
-            </p>
-
-        </div>
-
-
-    </div>
-
+毎日が少し楽しくなるようなアプリ体験を提供します。
 
 </div>
 
+<div class="features">
+
+<div class="card">
+
+<h3>
+📱 App Development
+</h3>
+
+<p>
+iPhoneアプリの企画・開発
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🎨 UI / UX Design
+</h3>
+
+<p>
+かわいく使いやすいデザイン制作
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🚀 App Operation
+</h3>
+
+<p>
+公開後の改善・アップデート運営
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1082,119 +1097,111 @@ aria-label="ページの上部へ戻る"
 
 <section id="apps">
 
-
 <div class="container">
 
+<h2>
+Our Apps
+</h2>
 
-    <h2>
-        Our Apps
-    </h2>
+<div class="apps">
 
+<!-- napoCam -->
 
-    <div class="apps">
+<div class="app">
 
+<a
+class="app-link"
+href="https://apps.apple.com/jp/app/napocam/id6795475312"
+target="_blank"
+rel="noopener noreferrer"
 
-        <!-- napoCam -->
+>
 
-        <div class="app">
+<img
+src="images/pinkycamera_ipad_01.jpg"
+alt="napoCam"
 
-            <a
-                class="app-link"
-                href="https://apps.apple.com/jp/app/napocam/id6795475312"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+>
 
-                <img
-                    src="images/pinkycamera_ipad_01.jpg"
-                    alt="napoCam"
-                >
+<div class="app-body">
 
+<h3>
+napoCam
+</h3>
 
-                <div class="app-body">
-
-                    <h3>
-                        napoCam
-                    </h3>
-
-                    <p>
-                        ピンクやガーリーな世界観が好きな方にぴったりのフィルターカメラ<br>
-                        ふんわりハートやドット、ゆめかわカラーなど、30種類の可愛いガーリーフィルターで撮影できる！<br>
-                        ホビ活・推し活・オタ活での写真やグッズ撮影、自撮りをもっと可愛く彩ります。お気に入りの一枚を残そう
-                    </p>
-
-                </div>
-
-            </a>
-
-        </div>
-
-
-        <!-- Coming Soon -->
-
-        <div class="app">
-
-            <div class="coming-soon-image">
-                Coming Soon
-            </div>
-
-
-            <div class="app-body">
-
-                <h3>
-                    Coming Soon
-                </h3>
-
-                <p>
-                    Coming Soon
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 潮干狩りゲーム -->
-
-        <div class="app">
-
-            <a
-                class="app-link"
-                href="https://apps.apple.com/app/%E6%BD%AE%E5%B9%B2%E7%8B%A9%E3%82%8A%E3%82%B2%E3%83%BC%E3%83%A0/id6796900479"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <img
-                    src="images/shiohigarigame_01_ipad.jpg"
-                    alt="潮干狩りゲーム"
-                >
-
-
-                <div class="app-body">
-
-                    <h3>
-                        潮干狩りゲーム
-                    </h3>
-
-                    <p>
-                        30秒で楽しむ、爽快！潮干狩りゲーム！<br>
-                        砂浜を指でスワイプして、制限時間30秒以内にたくさんのあさりを掘り出そう！<br>
-                        出現するのは、あさり・マテ貝・ホタテ・カニなどの海の仲間たち。狙った獲物を素早くゲットして、どんどんスコアを伸ばそう！
-                    </p>
-
-                </div>
-
-            </a>
-
-        </div>
-
-
-    </div>
-
+<p>
+ピンクやガーリーな世界観が好きな方にぴったりのフィルターカメラ<br>
+ふんわりハートやドット、ゆめかわカラーなど、30種類の可愛いガーリーフィルターで撮影できる！<br>
+ホビ活・推し活・オタ活での写真やグッズ撮影、自撮りをもっと可愛く彩ります。お気に入りの一枚を残そう
+</p>
 
 </div>
 
+</a>
+
+</div>
+
+<!-- Coming Soon -->
+
+<div class="app">
+
+<div class="coming-soon-image">
+Coming Soon
+</div>
+
+<div class="app-body">
+
+<h3>
+Coming Soon
+</h3>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+</div>
+
+<!-- 潮干狩りゲーム -->
+
+<div class="app">
+
+<a
+class="app-link"
+href="https://apps.apple.com/app/%E6%BD%AE%E5%B9%B2%E7%8B%A9%E3%82%8A%E3%82%B2%E3%83%BC%E3%83%A0/id6796900479"
+target="_blank"
+rel="noopener noreferrer"
+
+>
+
+<img
+src="images/shiohigarigame_01_ipad.jpg"
+alt="潮干狩りゲーム"
+
+>
+
+<div class="app-body">
+
+<h3>
+潮干狩りゲーム
+</h3>
+
+<p>
+30秒で楽しむ、爽快！潮干狩りゲーム！<br>
+砂浜を指でスワイプして、制限時間30秒以内にたくさんのあさりを掘り出そう！<br>
+出現するのは、あさり・マテ貝・ホタテ・カニなどの海の仲間たち。狙った獲物を素早くゲットして、どんどんスコアを伸ばそう！
+</p>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1204,30 +1211,25 @@ aria-label="ページの上部へ戻る"
 
 <section class="contact-section">
 
-
 <div class="container">
 
+<h2>
+Contact
+</h2>
 
-    <h2>
-        Contact
-    </h2>
+<p>
+アプリに関するお問い合わせ、その他ご連絡はこちらからお願いいたします。
+</p>
 
+<a
+href="mailto:naponoa[.inc@gmail.com](mailto:.inc@gmail.com)"
+class="button"
 
-    <p>
-        アプリに関するお問い合わせ、その他ご連絡はこちらからお願いいたします。
-    </p>
+>
 
-
-    <a
-        href="mailto:naponoa.inc@gmail.com"
-        class="button"
-    >
-        お問い合わせ
-    </a>
-
+お問い合わせ </a>
 
 </div>
-
 
 </section>
 
@@ -1237,52 +1239,45 @@ aria-label="ページの上部へ戻る"
 
 <footer>
 
-
 <div class="container">
 
+<div class="social-links">
 
-    <div class="social-links">
+<a
+href="https://x.com/naponoa.inc"
+target="_blank"
+rel="noopener noreferrer"
 
+>
 
-        <a
-            href="https://x.com/naponoa.inc"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            X
-        </a>
+X </a>
 
+<a
+href="https://www.instagram.com/naponoa.inc"
+target="_blank"
+rel="noopener noreferrer"
 
-        <a
-            href="https://www.instagram.com/naponoa.inc"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Instagram
-        </a>
+>
 
+Instagram </a>
 
-        <!-- TikTok
-        <a
-            href="https://www.tiktok.com/@naponoa.inc"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            TikTok
-        </a>
-        -->
-
-
-    </div>
-
-
-    <p class="copyright">
-        © 2026 naponoa
-    </p>
-
+<!-- TikTok
+<a
+    href="https://www.tiktok.com/@naponoa.inc"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+TikTok
+</a>
+-->
 
 </div>
 
+<p class="copyright">
+© 2026 naponoa
+</p>
+
+</div>
 
 </footer>
 
